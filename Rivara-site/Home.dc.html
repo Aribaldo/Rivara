@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ext-resource-dependency" content="images/box-aarambh.jpg">
+<meta name="ext-resource-dependency" content="images/box-anvaya.jpg">
+<meta name="ext-resource-dependency" content="images/box-viraasat.jpg">
+<meta name="ext-resource-dependency" content="images/brass-detail.jpg">
+<meta name="ext-resource-dependency" content="images/marble-detail.jpg">
+<meta name="ext-resource-dependency" content="images/wood-detail.jpg">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#111"/><text x="50" y="62" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#b08d57">R</text></svg></template>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<script src="./scrollcraft.js"></script>
+<style>
+@font-face{font-family:'Outfit';src:url(fonts/outfit.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Libre Baskerville';src:url(fonts/libre-baskerville.woff2) format('woff2');font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Libre Baskerville';src:url(fonts/libre-baskerville-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+html{scroll-behavior:smooth}
+body{margin:0;background:#ffffff;-webkit-font-smoothing:antialiased}
+a{color:#141414}a:hover{color:#B59444}
+::selection{background:#B59444;color:#141414}
+@keyframes rvHeroIn{0%{opacity:0;filter:blur(8px);transform:translateY(10px)}55%{filter:blur(0)}100%{opacity:1;filter:blur(0);transform:none}}
+@keyframes rvVeil{0%{opacity:1}100%{opacity:0}}
+@keyframes rvSettle{0%{transform:scale(1.06)}100%{transform:scale(1)}}
+@keyframes rvLineIn{0%{transform:scaleX(0);opacity:0}100%{transform:scaleX(1);opacity:1}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important}}
+</style>
+</helmet>
+<div style="font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; color: #141414; background: #ffffff; overflow-x: clip">
+
+<dc-import name="SiteHeader" active="home" hint-size="100%,88px" style="position: sticky; top: 0; z-index: 50; display: block"></dc-import>
+
+<section data-screen-label="Hero" style="position: relative; margin-top: -88px; height: 100vh; min-height: 640px; max-height: 1100px; overflow: hidden; background: #c9c4bb">
+<div data-hero="" style="position: absolute; inset: 0; transform-origin: 50% 40%"><div style="position: absolute; inset: 0; animation: rvSettle 4.5s cubic-bezier(.22,.61,.24,1) both">
+<sc-if value="{{heroDesktop}}" hint-placeholder-val="{{ true }}"><image-slot id="home-hero-1" shape="rect" src="images/hero-boxes.jpg" placeholder="Hero — luxury gift boxes"></image-slot></sc-if>
+<sc-if value="{{heroMobile}}" hint-placeholder-val="{{ false }}"><image-slot id="home-hero-mobile" shape="rect" src="images/hero-mobile.jpg" placeholder="Hero — mobile (portrait)"></image-slot></sc-if>
+</div></div>
+<div style="position: absolute; inset: 0; pointer-events: none; background: #141414; animation: rvVeil 2.4s cubic-bezier(.22,.61,.24,1) .1s both"></div>
+<div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(10,9,8,0.78) 0%, rgba(10,9,8,0.42) 34%, rgba(10,9,8,0.06) 64%, rgba(10,9,8,0) 100%)"></div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; pointer-events: none">
+<div style="max-width: 1360px; margin: 0 auto; box-sizing: border-box; padding: 0 clamp(20px, 4vw, 48px) clamp(64px, 11vh, 120px); color: #ffffff; display: flex; flex-direction: column; align-items: center; text-align: center">
+<h1 style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; max-width: 820px; font-size: clamp(30px, 3.8vw, 56px); font-weight: 400; line-height: 1.18; text-wrap: balance; animation: rvHeroIn 2.8s cubic-bezier(.22,.61,.24,1) .6s both">Gifts Made to Be Remembered.</h1>
+<span data-hero-line="" style="display: block; width: 64px; height: 1px; margin-top: 28px; background: #B59444; transform-origin: 50% 50%; animation: rvLineIn 2s cubic-bezier(.22,.61,.24,1) 1.8s both"></span>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Story" style="padding: clamp(80px, 11vw, 168px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1100px; margin: 0 auto; text-align: center">
+<span data-reveal="" style="display: inline-flex; align-items: center; gap: 14px; margin-bottom: 28px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>The Rivara Story<span style="display: block; width: 44px; height: 1px; background: #B59444"></span></span>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 auto 36px; max-width: 900px; font-size: clamp(24px, 3.6vw, 52px); font-weight: 400; line-height: 1.25; text-wrap: balance"><span style="color: #B59444">“</span>Rivara was born from a simple belief — a beautiful gift should be remembered long after it is opened.<span style="color: #B59444">”</span></h2>
+<div data-line="y" style="width: 1px; height: 56px; background: #B59444; margin: 0 auto 40px; transform-origin: 50% 0"></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(24px, 3vw, 40px); text-align: {{storyAlign}}">
+<p data-reveal="" style="margin: 0; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">Across India, generations of artisans have transformed wood, brass and marble into objects of extraordinary beauty.</p>
+<p data-reveal="" data-delay="0.12" style="margin: 0; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">Rivara brings these traditions together through a contemporary lens, thoughtfully curating handcrafted pieces into gifts that feel refined, personal and enduring.</p>
+<p data-reveal="" data-delay="0.24" style="margin: 0; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">Every Rivara creation celebrates not only beautiful materials, but also the craftsmanship and human hands behind them.</p>
+</div>
+<p data-reveal="" style="margin: 44px 0 0; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #141414">Where Indian Craft Becomes Contemporary Gifting</p>
+</div>
+</section>
+
+<section data-screen-label="Craft" style="padding: clamp(88px, 13vw, 200px) clamp(20px, 4vw, 48px); background: #f5f1ea">
+<div style="max-width: 1360px; margin: 0 auto">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: clamp(36px, 6vw, 88px)">
+<div style="max-width: 720px">
+<span data-reveal="" style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>Our Craft</span>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; font-size: clamp(28px, 3vw, 42px); font-weight: 400; line-height: 1.18; text-wrap: balance">Three Materials. Three Craft Traditions. One Rivara.</h2>
+</div>
+<p data-reveal="" style="margin: 0; max-width: 400px; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.9; color: #5c5a56">Our creations begin in places where craftsmanship has been passed from one generation to another.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(32px, 5vw, 80px); align-items: stretch">
+<div data-reveal="" style="display: flex; flex-direction: column">
+<sc-for list="{{materials}}" as="m" hint-placeholder-count="3">
+<button type="button" onClick="{{m.select}}" onMouseEnter="{{m.select}}" aria-pressed="{{m.active}}" style="padding: 18px 0; border: 0; border-top: 1px solid #dcd8d0; background: transparent; font: inherit; color: inherit; text-align: left; cursor: pointer; display: grid; grid-template-columns: 44px 1fr; gap: 8px 16px; align-items: baseline">
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 14px; color: {{m.numColor}}">{{m.num}}</span>
+<span style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px">
+<span style="font-size: clamp(26px, 2.6vw, 36px); font-weight: 300; line-height: 1.1; color: {{m.titleColor}}; transform: translateX({{m.nudge}}); transition: color .4s, transform .6s cubic-bezier(.16,1,.3,1)">{{m.title}}</span>
+<span style="font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e">{{m.origin}}</span>
+</span>
+</button>
+</sc-for>
+<div style="border-top: 1px solid #dcd8d0; padding-top: 32px; margin-top: auto">
+<p style="margin: 0 0 12px; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 18px; color: #141414">{{activeMaterial.subtitle}}</p>
+<p style="margin: 0; max-width: 520px; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">{{activeMaterial.desc}}</p>
+</div>
+</div>
+<div data-curtain="" style="position: relative; width: 100%; max-width: 420px; justify-self: end; aspect-ratio: 4 / 5; background: #ece9e4; overflow: hidden">
+<sc-for list="{{materials}}" as="m" hint-placeholder-count="3">
+<div style="position: absolute; inset: 0; opacity: {{m.opacity}}; transform: scale({{m.scale}}); transition: opacity .8s ease, transform 1.4s cubic-bezier(.16,1,.3,1); pointer-events: {{m.pe}}">
+<image-slot id="{{m.slot}}" shape="rect" data-img="{{m.src}}" placeholder="{{m.placeholder}}"></image-slot>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Collections" data-hscroll="" style="position: relative">
+<div data-hscroll-pin="" style="display: flex; flex-direction: column; justify-content: center; padding: clamp(56px, 10vw, 120px) 0 clamp(40px, 6vw, 72px); box-sizing: border-box">
+<div data-hscroll-track="" style="display: flex; align-items: flex-end; gap: clamp(28px, 3vw, 48px); padding: 0 clamp(20px, 4vw, 48px); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; will-change: transform">
+<div style="flex: 0 0 min(400px, 82vw); align-self: center; scroll-snap-align: start; padding-right: clamp(0px, 3vw, 48px)">
+<span style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>The Rivara Collection</span>
+<h2 style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 28px; font-size: clamp(28px, 3vw, 42px); font-weight: 400; line-height: 1.18; text-wrap: balance">Three Expressions of Thoughtful Gifting</h2>
+<p style="margin: 0 0 36px; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.9; color: #5c5a56">Created for different moments, each Rivara collection brings together Indian craftsmanship, considered materials and refined presentation.</p>
+<a href="Collections.dc.html" style="display: inline-block; padding: 8px 0; border-bottom: 1px solid #141414; font-size: 11px; font-weight: 500; letter-spacing: 0.28em; transition: color .4s, border-color .4s; text-transform: uppercase; text-decoration: none">View All Collections</a>
+</div>
+<sc-for list="{{collections}}" as="c" hint-placeholder-count="3">
+<a href="{{c.href}}" style="flex: 0 0 auto; width: calc(min(58vh, 620px) * 0.8); max-width: 82vw; scroll-snap-align: start; display: flex; flex-direction: column; text-decoration: none; color: #141414">
+<div data-curtain="" data-delay="{{c.delay}}" style="position: relative; aspect-ratio: 4 / 5; background: #ece9e4; margin-bottom: 24px; overflow: hidden">
+<div data-zoom="" style="position: absolute; inset: 0"><div style="position: absolute; inset: 0; transition: transform 1.8s cubic-bezier(.22,.61,.24,1), filter 1.8s" style-hover="transform: scale(1.035); filter: brightness(1.03)">
+<image-slot id="{{c.slot}}" shape="rect" data-img="{{c.src}}" placeholder="{{c.placeholder}}"></image-slot>
+</div></div>
+<span style="position: absolute; top: 20px; left: 20px; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 15px; color: #ffffff; pointer-events: none">{{c.num}}</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 14px; border-bottom: 1px solid #e0e0e0; margin-bottom: 16px">
+<h3 style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; font-size: 28px; font-weight: 400; ">{{c.title}}</h3>
+<span style="font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 14px; color: #6e6e6e">{{c.subtitle}}</span>
+</div>
+<p style="margin: 0 0 20px; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 15px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">{{c.desc}}</p>
+<span style="align-self: flex-start; padding: 8px 0; border-bottom: 1px solid #141414; font-size: 11px; font-weight: 500; letter-spacing: 0.28em; transition: color .4s, border-color .4s; text-transform: uppercase">Discover {{c.title}}</span>
+</a>
+</sc-for>
+<div data-hscroll-hide="" style="flex: 0 0 clamp(20px, 6vw, 120px)"></div>
+</div>
+<div data-hscroll-hide="" style="max-width: 1360px; width: 100%; margin: 40px auto 0; box-sizing: border-box; padding: 0 clamp(20px, 4vw, 48px)">
+<div style="height: 1px; background: #e0e0e0; position: relative; overflow: hidden">
+<div data-hscroll-bar="" style="position: absolute; inset: 0; background: #141414; transform-origin: 0 50%; transform: scaleX(0)"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Presentation" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); background: #141414; color: #ffffff">
+<div style="position: relative; min-height: clamp(460px, 56vw, 820px); background: #2a2a2a; overflow: hidden">
+<div data-parallax="0.09" style="position: absolute; left: 0; right: 0; top: -12%; bottom: -12%">
+<image-slot id="home-presentation" shape="rect" src="images/packaging-experience.jpg" placeholder="Packaging experience — layered gift box"></image-slot>
+</div>
+</div>
+<div style="padding: clamp(56px, 8vw, 128px) clamp(24px, 6vw, 104px); display: flex; flex-direction: column; justify-content: center">
+<span data-reveal="" style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #d9c08a"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>The Presentation</span>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 32px; font-size: clamp(28px, 3vw, 42px); font-weight: 400; line-height: 1.18">An Experience in Every Layer.</h2>
+<p data-reveal="" style="margin: 0 0 28px; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 20px; color: #B59444">Thoughtfully Curated</p>
+<div data-reveal="" data-delay="0.1" style="max-width: 480px; display: flex; flex-direction: column; gap: 18px; font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.88)">
+<p style="margin: 0">Every material, object and detail is selected to belong together.</p>
+<p style="margin: 0">From personalised wooden boxes and engraved details to curated combinations and branded presentation, Rivara can create gifting tailored to your occasion.</p>
+</div>
+<div data-reveal="" data-delay="0.2" style="margin-top: 44px"><a href="Contact.dc.html?occasion=Bespoke" style="display: inline-block; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.7); color: #ffffff; font-size: 11px; font-weight: 500; letter-spacing: 0.28em; transition: color .4s, border-color .4s; text-transform: uppercase; text-decoration: none">Create a Bespoke Gift</a></div>
+</div>
+</section>
+
+<section data-screen-label="Occasions" style="padding: clamp(88px, 13vw, 200px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1360px; margin: 0 auto">
+<div style="max-width: 760px; margin: 0 auto clamp(40px, 6vw, 88px); text-align: center">
+<span data-reveal="" style="display: inline-flex; align-items: center; gap: 14px; margin-bottom: 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>Gifting For Every Occasion<span style="display: block; width: 44px; height: 1px; background: #B59444"></span></span>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 24px; font-size: clamp(28px, 3vw, 42px); font-weight: 400; line-height: 1.18">Made for Moments That Matter</h2>
+<p data-reveal="" style="margin: 0; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.9; color: #5c5a56">Some occasions call for more than a gift. They call for something considered, personal and memorable.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(20px, 2.4vw, 32px)">
+<sc-for list="{{occasions}}" as="o" hint-placeholder-count="3">
+<article style="display: flex; flex-direction: column">
+<div data-curtain="" data-delay="{{o.delay}}" style="position: relative; aspect-ratio: 3 / 4; background: #ece9e4; margin-bottom: 28px; overflow: hidden">
+<div data-zoom="" style="position: absolute; inset: 0"><div style="position: absolute; inset: 0; transition: transform 1.8s cubic-bezier(.22,.61,.24,1), filter 1.8s" style-hover="transform: scale(1.035); filter: brightness(1.03)">
+<image-slot id="{{o.slot}}" shape="rect" data-img="{{o.src}}" placeholder="{{o.placeholder}}"></image-slot>
+</div></div>
+</div>
+<div data-reveal="" data-delay="{{o.delay}}" style="display: flex; flex-direction: column; flex: 1">
+<h3 style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 14px; font-size: 24px; font-weight: 400">{{o.title}}</h3>
+<p style="margin: 0 0 24px; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 16px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">{{o.desc}}</p>
+<a href="{{o.href}}" style="margin-top: auto; align-self: flex-start; padding: 8px 0; border-bottom: 1px solid #141414; font-size: 11px; font-weight: 500; letter-spacing: 0.28em; transition: color .4s, border-color .4s; text-transform: uppercase; text-decoration: none">{{o.linkLabel}}</a>
+</div>
+</article>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Artisans" style="padding: clamp(88px, 13vw, 200px) clamp(20px, 4vw, 48px); background: #f5f1ea; overflow: hidden">
+<div style="max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: clamp(48px, 6vw, 112px); align-items: center">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div data-parallax="0.04" style="grid-row: span 2">
+<div data-curtain="" style="position: relative; height: 100%; min-height: 360px; background: #ece9e4; overflow: hidden">
+<image-slot id="home-artisan-1" shape="rect" src="images/craft-wood.jpg" placeholder="Artisan hands — wood"></image-slot>
+</div>
+</div>
+<div data-parallax="-0.05">
+<div data-curtain="" data-delay="0.12" style="aspect-ratio: 1 / 1; background: #ece9e4; overflow: hidden">
+<image-slot id="home-artisan-2" shape="rect" src="images/craft-marble.jpg" placeholder="Marble inlay detail"></image-slot>
+</div>
+</div>
+<div data-parallax="-0.08">
+<div data-curtain="" data-delay="0.24" style="aspect-ratio: 1 / 1; background: #ece9e4; overflow: hidden">
+<image-slot id="home-artisan-3" shape="rect" src="images/craft-brass.jpg" placeholder="Brass polishing"></image-slot>
+</div>
+</div>
+</div>
+<div>
+<span data-reveal="" style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>Our Artisans</span>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 32px; font-size: clamp(28px, 3vw, 42px); font-weight: 400; line-height: 1.18">Curated in India.<br>Crafted by Artisans.</h2>
+<p data-reveal="" style="margin: 0 0 24px; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 18px; line-height: 1.9; color: #5c5a56">Behind every Rivara creation is a chain of skilled hands.</p>
+<ul style="margin: 0 0 28px; padding: 0; list-style: none; display: flex; flex-direction: column">
+<li data-reveal="" style="padding: 14px 0; border-top: 1px solid #dcd8d0; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 18px">The woodworker who shapes the box.</li>
+<li data-reveal="" data-delay="0.08" style="padding: 14px 0; border-top: 1px solid #dcd8d0; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 18px">The artisan who works the brass.</li>
+<li data-reveal="" data-delay="0.16" style="padding: 14px 0; border-top: 1px solid #dcd8d0; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 18px">The craftsman who cuts and finishes the marble.</li>
+<li data-reveal="" data-delay="0.24" style="padding: 14px 0; border-top: 1px solid #dcd8d0; border-bottom: 1px solid #dcd8d0; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 18px">The hands that engrave, polish, assemble and finally present each piece.</li>
+</ul>
+<div data-reveal="">
+<p style="margin: 0 0 20px; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 17px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">A Rivara gift supports this wider ecosystem of Indian craftsmanship — helping traditional skills, livelihoods and generations of knowledge continue.</p>
+<p style="margin: 0 0 36px; font-size: 18px; font-weight: 400; line-height: 1.6">When you choose Rivara, you are not simply giving an object. You are carrying a piece of Indian craft forward.</p>
+<a href="Contact.dc.html" style="display: inline-block; padding: 8px 0; border-bottom: 1px solid #141414; font-size: 11px; font-weight: 500; letter-spacing: 0.28em; transition: color .4s, border-color .4s; text-transform: uppercase; text-decoration: none">Enquire About Artisan-Led Gifting</a>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Why Rivara" style="padding: clamp(88px, 13vw, 200px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1360px; margin: 0 auto">
+<div style="margin-bottom: clamp(48px, 5vw, 72px)">
+<span data-reveal="" style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>Why Rivara</span>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; font-size: clamp(28px, 3vw, 42px); font-weight: 400; line-height: 1.18">The Art of Giving, Curated.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 0 32px">
+<sc-for list="{{reasons}}" as="r" hint-placeholder-count="5">
+<div data-reveal="" data-delay="{{r.delay}}" style="padding: clamp(20px, 2.4vw, 28px) 0 clamp(24px, 2.6vw, 32px); border-top: 1px solid #141414">
+<div style="margin-bottom: clamp(16px, 3vw, 48px); font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 22px; color: #B59444">{{r.num}}</div>
+<h4 style="margin: 0 0 14px; font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase">{{r.title}}</h4>
+<p style="margin: 0; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 16px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">{{r.desc}}</p>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Enquire" style="position: relative; overflow: hidden; background: #141414; color: #ffffff">
+<div data-parallax="0.12" style="position: absolute; left: 0; right: 0; top: -15%; bottom: -15%; opacity: 0.38">
+<image-slot id="home-cta-bg" shape="rect" src="images/box-green-tall.jpg" placeholder="Background image"></image-slot>
+</div>
+<div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to right, rgba(20,20,20,0.92) 0%, rgba(20,20,20,0.7) 55%, rgba(20,20,20,0.5) 100%)"></div>
+<div style="position: relative; max-width: 1360px; margin: 0 auto; box-sizing: border-box; padding: clamp(72px, 13vw, 200px) clamp(20px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: end; pointer-events: none">
+<div>
+<div data-line="" style="width: 48px; height: 1px; background: #B59444; margin-bottom: 32px; transform-origin: 0 50%"></div>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; font-size: clamp(32px, 3.6vw, 52px); font-weight: 400; line-height: 1.08; text-wrap: balance">Give Something Worth Remembering.</h2>
+</div>
+<div data-reveal="" data-delay="0.15" style="pointer-events: auto">
+<p style="margin: 0 0 40px; font-family: 'Libre Baskerville', Georgia, serif; font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.88); text-wrap: pretty">Whether you are celebrating a wedding, recognising an important relationship, creating a corporate gift or looking for something uniquely your own, Rivara can help you create it.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+<a href="Contact.dc.html" style="padding: 19px 34px; background: #ffffff; color: #141414; font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background .35s" style-hover="background: #B59444; color: #141414">Enquire for Custom Gifting</a>
+<a href="Collections.dc.html" style="padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.7); color: #ffffff; font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none">Explore the Collection</a>
+</div>
+</div>
+</div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { mat: 0, w: typeof window !== 'undefined' ? window.innerWidth : 1440 };
+  componentDidMount() { this._r = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this._r); this._img(); }
+  componentDidUpdate() { this._img(); }
+  _img() { requestAnimationFrame(() => document.querySelectorAll('image-slot[data-img]').forEach(el => { const s = el.getAttribute('data-img'); if (s && el.getAttribute('src') !== s) el.setAttribute('src', s); })); }
+  componentWillUnmount() { window.removeEventListener('resize', this._r); }
+  renderVals() {
+    const { mat } = this.state;
+    const mats = [
+      { title: 'Brass', subtitle: 'Timeless Metal Artistry', origin: 'Moradabad', desc: 'Known for generations of exceptional metal craftsmanship, Moradabad gives Rivara its beautifully handcrafted brass pieces — shaped, finished and detailed by skilled hands.' },
+      { title: 'Marble', subtitle: 'The Elegance of Indian Stone', origin: 'Agra', desc: 'Inspired by a centuries-old tradition of marble craftsmanship and inlay, our marble pieces bring quiet elegance, permanence and artistry to every Rivara creation.' },
+      { title: 'Wood', subtitle: 'Crafted by Hand', origin: 'Saharanpur', desc: 'Renowned for wood carving and engraving, Saharanpur brings warmth and character to Rivara through beautifully crafted wooden forms and presentation boxes.' }
+    ];
+    const occ = [
+      { title: 'Weddings', q: 'Weddings', src: 'images/box-viraasat.jpg', desc: 'Thoughtfully curated gifting for wedding celebrations, families and guests — with personalised details that make each gift part of the occasion.', linkLabel: 'Explore Wedding Gifting' },
+      { title: 'Corporate Gifting', q: 'Corporate', src: 'images/box-anvaya.jpg', desc: 'Distinctive handcrafted gifts for clients, partners, teams and important business relationships — created to represent your organisation with elegance.', linkLabel: 'Enquire About Corporate Gifting' },
+      { title: 'Festivals', q: 'Festivals', src: 'images/box-aarambh.jpg', desc: 'Contemporary Indian gifting rooted in traditional craft, thoughtfully curated for Diwali and other meaningful celebrations.', linkLabel: 'Enquire About Festival Gifting' }
+    ];
+    const cols = [
+      { title: 'Aarambh', subtitle: 'A Thoughtful Beginning', desc: 'Our most refined expression of simplicity. Compact, elegant and beautifully presented, Aarambh brings together handcrafted Indian elements in a gift designed to leave an impression without excess.' },
+      { title: 'Anvaya', subtitle: 'A Connection That Continues', desc: 'A richer curation of craft and material, created for occasions and relationships that deserve something more personal. Anvaya balances traditional craftsmanship with understated contemporary luxury.' },
+      { title: 'Viraasat', subtitle: 'Worthy of Being Remembered', desc: 'Our most elaborate expression of Rivara. A statement in craftsmanship, presentation and detail, Viraasat celebrates the richness of Indian artisanal traditions through a gift designed to be treasured beyond the occasion.' }
+    ];
+    const num = i => String(i + 1).padStart(2, '0');
+    const narrow = this.state.w < 700;
+    return {
+      heroDesktop: !narrow, heroMobile: narrow, storyAlign: this.state.w < 640 ? 'center' : 'left',
+      materials: mats.map((m, i) => ({ ...m, num: num(i), slot: 'home-craft-' + m.title.toLowerCase(), src: 'images/' + m.title.toLowerCase() + '-detail.jpg', placeholder: m.title + ' — ' + m.origin, active: i === mat, opacity: i === mat ? 1 : 0, scale: i === mat ? 1 : 1.08, nudge: i === mat ? '10px' : '0px', pe: i === mat ? 'auto' : 'none', titleColor: i === mat ? '#141414' : '#a8a49c', numColor: i === mat ? '#B59444' : '#a8a49c', select: () => this.setState({ mat: i }) })),
+      activeMaterial: mats[mat],
+      collections: cols.map((c, i) => ({ ...c, num: num(i), delay: String(i * 0.12), slot: 'home-col-' + c.title.toLowerCase(), src: 'images/box-' + c.title.toLowerCase() + '.jpg', placeholder: c.title + ' gift box', href: 'Collections.dc.html#' + c.title.toLowerCase() })),
+      occasions: occ.map((o, i) => ({ ...o, delay: String(i * 0.14), slot: 'home-occ-' + o.q.toLowerCase(), placeholder: o.title, href: 'Contact.dc.html?occasion=' + o.q })),
+      reasons: [
+        { num: '01', title: 'Handcrafted in India', desc: 'Created using the craftsmanship of Indian artisans.' },
+        { num: '02', title: 'Rooted in Craft', desc: 'Brass from Moradabad. Marble from Agra. Woodcraft from Saharanpur.' },
+        { num: '03', title: 'Thoughtfully Curated', desc: 'Every material, object and detail is selected to belong together.' },
+        { num: '04', title: 'Made Personal', desc: 'Customisation for weddings, corporate gifting, festivals and special occasions.' },
+        { num: '05', title: 'Designed to Be Remembered', desc: 'Because the most meaningful gifts live beyond the moment in which they are given.' }
+      ].map((r, i) => ({ ...r, delay: String(i * 0.1) }))
+    };
+  }
+}
+</script>
+</body>
+</html>
