@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<script src="./scrollcraft.js"></script>
+<style>
+@font-face{font-family:'Outfit';src:url(fonts/outfit.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Libre Baskerville';src:url(fonts/libre-baskerville.woff2) format('woff2');font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Libre Baskerville';src:url(fonts/libre-baskerville-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+body{margin:0;background:#ffffff}
+a{color:#141414}a:hover{color:#B59444}
+input::placeholder,textarea::placeholder{color:#9a9a9a}
+</style>
+</helmet>
+<div style="font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; color: #141414; background: #ffffff">
+
+<dc-import name="SiteHeader" active="contact" hint-size="100%,88px" style="position: sticky; top: 0; z-index: 50; display: block"></dc-import>
+
+<section data-screen-label="Enquiry" style="padding: clamp(48px, 8vw, 112px) clamp(20px, 4vw, 48px) clamp(64px, 10vw, 140px)">
+<div style="max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: clamp(56px, 7vw, 112px); align-items: start">
+
+<div style="display: flex; flex-direction: column; gap: 48px">
+<div>
+<span style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>Get in Touch</span>
+<h1 data-mask="" data-delay="0.15" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 20px; font-size: clamp(38px, 4.4vw, 60px); font-weight: 400; line-height: 1; letter-spacing: -0.01em">Contact Rivara</h1>
+<p style="margin: 0; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 17px; color: #6e6e6e">A brand by Headways International</p>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="padding: 22px 0; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px">
+<h4 style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #6e6e6e; flex: 0 0 180px">Headquarters</h4>
+<p style="margin: 0; font-size: 20px; line-height: 1.5">Shop No. 004/A, B Wing, Maheshwar Kailash Building<br>Bapu Bagwe Road, Dahisar West, Mumbai<br>Near Sailee Beauty Parlour</p>
+</div>
+<div style="padding: 22px 0; border-top: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px">
+<h4 style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #6e6e6e; flex: 0 0 180px">Email</h4>
+<a href="mailto:sachin@rivaragifting.com" style="font-size: 20px; text-decoration: none; overflow-wrap: anywhere">sachin@rivaragifting.com</a>
+</div>
+<div style="padding: 22px 0; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px">
+<h4 style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #6e6e6e; flex: 0 0 180px">Phone / WhatsApp</h4>
+<a href="tel:+919152117519" style="font-size: 20px; text-decoration: none">+91 91521 17519</a>
+</div>
+</div>
+</div>
+
+<div style="background: #f5f1ea; padding: clamp(28px, 4vw, 56px)">
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 48px 0; text-align: center">
+<div style="width: 48px; height: 1px; background: #B59444; margin: 0 auto 32px"></div>
+<h3 style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 16px; font-size: 32px; font-weight: 400">Message Sent.</h3>
+<p style="margin: 0 auto 36px; max-width: 420px; font-size: 17px; line-height: 1.7; color: #6e6e6e">Thank you for reaching out. We will get back to you soon.</p>
+<button type="button" onClick="{{reset}}" style="padding: 6px 0; border: 0; border-bottom: 1px solid #141414; background: transparent; cursor: pointer; font: inherit; font-size: 15px; font-weight: 400; color: #141414">Send another enquiry</button>
+</div>
+</sc-if>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+<h3 style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 8px; font-size: 24px; font-weight: 500; letter-spacing: 0">Contact Us</h3>
+<p style="margin: 0 0 40px; font-size: 16px; font-weight: 300; color: #6e6e6e">Tell us about your occasion and we will help you create it.</p>
+<div style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 32px 24px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c-name" style="font-size: 14px; font-weight: 400; color: #4a4a4a">Full Name *</label>
+<input id="c-name" type="text" value="{{name}}" onChange="{{onName}}" style="padding: 12px 0; border: 0; border-bottom: 1px solid {{nameLine}}; background: transparent; font: inherit; font-size: 16px; font-weight: 400; color: #141414; outline: none" style-focus="border-bottom-color: #141414">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c-email" style="font-size: 14px; font-weight: 400; color: #4a4a4a">Email Address *</label>
+<input id="c-email" type="email" value="{{email}}" onChange="{{onEmail}}" style="padding: 12px 0; border: 0; border-bottom: 1px solid {{emailLine}}; background: transparent; font: inherit; font-size: 16px; font-weight: 400; color: #141414; outline: none" style-focus="border-bottom-color: #141414">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c-phone" style="font-size: 14px; font-weight: 400; color: #4a4a4a">Phone / WhatsApp</label>
+<input id="c-phone" type="tel" value="{{phone}}" onChange="{{onPhone}}" style="padding: 12px 0; border: 0; border-bottom: 1px solid #c9c5bd; background: transparent; font: inherit; font-size: 16px; font-weight: 400; color: #141414; outline: none" style-focus="border-bottom-color: #141414">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c-qty" style="font-size: 14px; font-weight: 400; color: #4a4a4a">Approx. Quantity</label>
+<input id="c-qty" type="text" inputmode="numeric" placeholder="e.g. 50" value="{{qty}}" onChange="{{onQty}}" style="padding: 12px 0; border: 0; border-bottom: 1px solid #c9c5bd; background: transparent; font: inherit; font-size: 16px; font-weight: 400; color: #141414; outline: none" style-focus="border-bottom-color: #141414">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c-message" style="font-size: 14px; font-weight: 400; color: #4a4a4a">Message</label>
+<textarea id="c-message" rows="4" value="{{message}}" onChange="{{onMessage}}" style="padding: 12px 0; border: 0; border-bottom: 1px solid #c9c5bd; background: transparent; font: inherit; font-size: 16px; font-weight: 400; line-height: 1.6; color: #141414; outline: none; resize: vertical" style-focus="border-bottom-color: #141414"></textarea>
+</div>
+<sc-if value="{{showError}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; font-size: 14px; color: #9a3b2a">Please add your name and a valid email address.</p>
+</sc-if>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<button type="button" onClick="{{send}}" style="padding: 20px 36px; border: 0; background: #141414; color: #ffffff; cursor: pointer; font: inherit; font-size: 15px; font-weight: 500; letter-spacing: 0.02em; transition: background .25s, color .25s" style-hover="background: #B59444; color: #141414">Send message</button>
+<a href="https://wa.me/919152117519" style="font-size: 15px; font-weight: 400; text-decoration: none; color: #4a4a4a">Or message us on WhatsApp →</a>
+</div>
+</div>
+</sc-if>
+</div>
+
+</div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false, tried: false, occasion: null, collection: null, name: '', email: '', phone: '', qty: '', message: '' };
+  componentDidMount() {
+    try {
+      const q = new URLSearchParams(window.location.search);
+      const o = q.get('occasion'), c = q.get('collection');
+      this.setState({ occasion: o || null, collection: c || null });
+    } catch (e) {}
+  }
+  chips(list, key) {
+    return list.map(([v, label]) => {
+      const on = this.state[key] === v;
+      return { label, on, border: on ? '#141414' : '#c9c5bd', bg: on ? '#141414' : 'transparent', fg: on ? '#ffffff' : '#141414', pick: () => this.setState({ [key]: on ? null : v }) };
+    });
+  }
+  renderVals() {
+    const s = this.state;
+    const nameOk = s.name.trim().length > 0, emailOk = /^\S+@\S+\.\S+$/.test(s.email);
+    const field = k => e => this.setState({ [k]: e.target.value });
+    return {
+      sent: s.sent, notSent: !s.sent,
+      name: s.name, email: s.email, phone: s.phone, qty: s.qty, message: s.message,
+      onName: field('name'), onEmail: field('email'), onPhone: field('phone'), onQty: field('qty'), onMessage: field('message'),
+      nameLine: s.tried && !nameOk ? '#9a3b2a' : '#c9c5bd',
+      emailLine: s.tried && !emailOk ? '#9a3b2a' : '#c9c5bd',
+      showError: s.tried && !(nameOk && emailOk),
+      occasions: this.chips([['Weddings', 'Weddings'], ['Corporate', 'Corporate Gifting'], ['Festivals', 'Festivals'], ['Bespoke', 'Bespoke & Custom']], 'occasion'),
+      collections: this.chips([['Aarambh', 'Aarambh'], ['Anvaya', 'Anvaya'], ['Viraasat', 'Viraasat'], ['Unsure', 'Not sure yet']], 'collection'),
+      send: () => (nameOk && emailOk) ? this.setState({ sent: true }) : this.setState({ tried: true }),
+      reset: () => this.setState({ sent: false, tried: false, name: '', email: '', phone: '', qty: '', message: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>

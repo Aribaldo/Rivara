@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script src="./image-slot.js"></script>
+<script src="./scrollcraft.js"></script>
+<style>
+@font-face{font-family:'Outfit';src:url(fonts/outfit.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Libre Baskerville';src:url(fonts/libre-baskerville.woff2) format('woff2');font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Libre Baskerville';src:url(fonts/libre-baskerville-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+html{scroll-behavior:smooth}
+body{margin:0;background:#ffffff}
+a{color:#141414}a:hover{color:#B59444}
+</style>
+</helmet>
+<div style="font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; color: #141414; background: #ffffff">
+
+<dc-import name="SiteHeader" active="story" hint-size="100%,88px" style="position: sticky; top: 0; z-index: 50; display: block"></dc-import>
+
+<section data-screen-label="Hero" style="position: relative; margin-top: -88px; height: min(80vh, 760px); min-height: 520px; background: #c9c4bb; overflow: hidden">
+<div data-hero="" style="position: absolute; inset: 0"><image-slot id="story-hero" shape="rect" src="images/craft-wood.webp" placeholder="Artisans — marble inlay"></image-slot></div>
+<div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 75%)"></div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; pointer-events: none">
+<div data-hero-fade="" style="max-width: 1360px; margin: 0 auto; box-sizing: border-box; padding: 0 clamp(20px, 4vw, 48px) clamp(40px, 6vw, 72px); color: #ffffff">
+<span style="display: block; margin-bottom: 24px; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase">Our Story</span>
+<h1 data-mask="" data-delay="0.25" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; font-size: clamp(34px, 4.2vw, 58px); font-weight: 400; line-height: 1.02; letter-spacing: -0.01em">Indian Craft.<br>Contemporary Expression.</h1>
+</div>
+</div>
+</section>
+
+<section data-screen-label="About" style="padding: clamp(88px, 13vw, 200px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1360px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 32px clamp(40px, 6vw, 96px)">
+<div data-reveal="" style="flex: 1 1 200px">
+<span style="display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e">About Rivara</span>
+<div style="width: 48px; height: 1px; background: #B59444; margin-top: 24px"></div>
+</div>
+<div data-reveal="" style="flex: 3 1 520px; min-width: 0">
+<p style="margin: 0 0 56px; font-size: clamp(21px, 2.1vw, 29px); line-height: 1.45; text-wrap: pretty">Rivara is a luxury gifting house born in India. We work with traditional craft communities across the country, bringing together brass, marble and wood in a contemporary language of gifting. Rather than treating Indian craft simply as decoration, Rivara places craftsmanship at the heart of every creation — celebrating the material, the artisan and the story behind it.</p>
+<div style="padding-top: 32px; border-top: 1px solid #e0e0e0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 24px">
+<span style="font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e">Our purpose is simple</span>
+<p style="margin: 0; font-family: 'Libre Baskerville', Georgia, serif; font-style: italic; font-size: 21px; line-height: 1.6">To create gifts that are beautiful to receive, meaningful to give and worthy of being remembered.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Craft Clusters" style="padding: clamp(64px, 10vw, 140px) clamp(20px, 4vw, 48px); background: #f5f1ea">
+<div style="max-width: 1360px; margin: 0 auto">
+<div data-reveal="" style="margin-bottom: clamp(48px, 6vw, 80px)">
+<span style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>Three Traditions</span>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; font-size: clamp(28px, 3vw, 42px); font-weight: 400; line-height: 1.18">Our Craft Clusters</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(32px, 3vw, 48px)">
+<sc-for list="{{clusters}}" as="c" hint-placeholder-count="3">
+<article data-reveal="" style="display: flex; flex-direction: column">
+<div data-curtain="" style="position: relative; aspect-ratio: 3 / 4; background: #ece9e4; margin-bottom: 28px; overflow: hidden">
+<image-slot id="{{c.slot}}" shape="rect" src="{{c.src}}" placeholder="{{c.img}}"></image-slot>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid #dcd8d0">
+<h3 style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; font-size: 28px; font-weight: 400">{{c.city}}</h3>
+<span style="font-size: 11px; font-weight: 500; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6d2e">{{c.craft}}</span>
+</div>
+<p style="margin: 0; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 16px; line-height: 1.9; color: #5c5a56; text-wrap: pretty">{{c.desc}}</p>
+</article>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Artisans" style="padding: clamp(64px, 10vw, 140px) 0; background: #141414; color: #ffffff; overflow: hidden">
+<div style="max-width: 1360px; margin: 0 auto; box-sizing: border-box; padding: 0 clamp(20px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: clamp(40px, 6vw, 96px)">
+<div data-reveal="">
+<span style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7)"><span style="display: block; width: 44px; height: 1px; background: #B59444"></span>Our Artisans</span>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0; font-size: clamp(30px, 3.2vw, 46px); font-weight: 400; line-height: 1.08">Curated in India.<br>Crafted by Artisans.</h2>
+</div>
+<div data-reveal="" style="font-family: 'Libre Baskerville', Georgia, serif; font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.86)">
+<p style="margin: 0 0 24px">Behind every Rivara creation is a chain of skilled hands.</p>
+<ul style="margin: 0 0 28px; padding: 0; list-style: none; display: flex; flex-direction: column; font-style: italic; font-size: 19px; color: #ffffff">
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.18)">The woodworker who shapes the box.</li>
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.18)">The artisan who works the brass.</li>
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.18)">The craftsman who cuts and finishes the marble.</li>
+<li style="padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.18); border-bottom: 1px solid rgba(255,255,255,0.18)">The hands that engrave, polish, assemble and finally present each piece.</li>
+</ul>
+<p style="margin: 0 0 20px">A Rivara gift supports this wider ecosystem of Indian craftsmanship — helping traditional skills, livelihoods and generations of knowledge continue.</p>
+<p style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 18px; line-height: 1.6; color: #ffffff">When you choose Rivara, you are not simply giving an object. You are carrying a piece of Indian craft forward.</p>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Enquire" style="padding: clamp(64px, 10vw, 140px) clamp(20px, 4vw, 48px); text-align: center">
+<div data-reveal="" style="max-width: 820px; margin: 0 auto">
+<div style="width: 48px; height: 1px; background: #B59444; margin: 0 auto 32px"></div>
+<h2 data-mask="" style="font-family: 'Libre Baskerville', Georgia, serif; letter-spacing: -0.015em; margin: 0 0 28px; font-size: clamp(30px, 3.2vw, 46px); font-weight: 400; line-height: 1.08; text-wrap: balance">Give Something Worth Remembering.</h2>
+<p style="margin: 0 auto 40px; max-width: 640px; font-family: 'Outfit', 'Helvetica Neue', sans-serif; font-weight: 300; font-size: 18px; line-height: 1.9; color: #5c5a56">Whether you are celebrating a wedding, recognising an important relationship, creating a corporate gift or looking for something uniquely your own, Rivara can help you create it.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 28px">
+<a href="Contact.dc.html" style="padding: 18px 30px; background: #141414; color: #ffffff; font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: background .25s, color .25s" style-hover="background: #B59444; color: #141414">Enquire for Custom Gifting</a>
+<a href="Collections.dc.html" style="padding: 8px 0; border-bottom: 1px solid #141414; font-size: 11px; font-weight: 500; letter-spacing: 0.28em; transition: color .4s, border-color .4s; text-transform: uppercase; text-decoration: none">Explore the Collection</a>
+</div>
+</div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  trackRef = React.createRef();
+  scroll(dir) { const t = this.trackRef.current; if (t) t.scrollBy({ left: dir * Math.max(280, t.clientWidth * 0.6), behavior: 'smooth' }); }
+  renderVals() {
+    return {
+      trackRef: this.trackRef,
+      scrollPrev: () => this.scroll(-1),
+      scrollNext: () => this.scroll(1),
+      clusters: [
+        { city: 'Moradabad', craft: 'Brass', img: 'Moradabad brass craft', desc: 'Known for generations of exceptional metal craftsmanship, Moradabad gives Rivara its beautifully handcrafted brass pieces — shaped, finished and detailed by skilled hands.' },
+        { city: 'Agra', craft: 'Marble', img: 'Agra marble craft', desc: 'Inspired by a centuries-old tradition of marble craftsmanship and inlay, our marble pieces bring quiet elegance, permanence and artistry to every Rivara creation.' },
+        { city: 'Saharanpur', craft: 'Wood', img: 'Saharanpur woodcraft', desc: 'Renowned for wood carving and engraving, Saharanpur brings warmth and character to Rivara through beautifully crafted wooden forms and presentation boxes.' }
+      ].map(c => ({ ...c, slot: 'story-cluster-' + c.city.toLowerCase(), src: 'images/craft-' + c.craft.toLowerCase() + '.webp' })),
+      gallery: [['Working the brass', 'craft-brass'], ['Engraving the marble', 'craft-marble'], ['Shaping the box', 'craft-wood'], ['Assembling & presenting', 'box-anvaya'], ['Finally presented', 'box-viraasat']].map(([caption, f], i) => ({ caption, src: 'images/' + f + '.webp', slot: 'story-workshop-' + (i + 1) }))
+    };
+  }
+}
+</script>
+</body>
+</html>
